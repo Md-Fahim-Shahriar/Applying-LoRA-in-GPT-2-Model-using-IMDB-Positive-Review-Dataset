@@ -1,0 +1,12 @@
+# Ignore model weights and large binaries
+results/
+final_lora_model/
+venv/
+*.bin
+*.pt
+*.safetensors
+
+# Ignore logs and caches
+logs/
+__pycache__/
+.ipynb_checkpoints/
