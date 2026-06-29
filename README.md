@@ -63,7 +63,7 @@ Large language models like GPT-2 are expensive to fully fine-tune. This project 
 
 ## How to Run
 
-### 1. Install dependencies
+### 1. Install dependencies (Install the appropriate PyTorch build for your hardware before installing the remaining dependencies.)
 
 ```bash
 pip install -r requirements.txt

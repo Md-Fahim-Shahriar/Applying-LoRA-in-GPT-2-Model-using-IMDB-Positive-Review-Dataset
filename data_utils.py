@@ -50,13 +50,15 @@ def data_process(review = 500):
     small_pos_dataset = positive_reviews.select(range(review))
     split_dataset = small_pos_dataset.train_test_split(test_size = 0.2)
 
+
     tokenized_dataset = split_dataset.map(
     tokenize_function,
     batched= True,
     remove_columns=split_dataset["train"].column_names
     )
-    
+
     return tokenized_dataset
+
 
     
 
@@ -64,20 +66,26 @@ def data_process(review = 500):
 
 if __name__ == "__main__":
 
-    tokenized_dataset_checking = data_process(10)
+    tokenize_dataset_checking = data_process(10)
 
-    print("-"*20)
-    print(tokenized_dataset_checking)
+    print(tokenize_dataset_checking)
 
     # n = int(input("Enter the number of reviews: "))
     # tokenized_dataset = data_process(n)
     # print(tokenized_dataset)
 
-    for i in range(3):
-        print(f"Review #{i}")
-        # print(f"Text: {tokenized_dataset_checking['train'][i]['text'][:50]}")
-        print(f"Token ID: {tokenized_dataset_checking['train'][i]['input_ids'][:50]}")
-        print(f"Token Labels: {tokenized_dataset_checking['train'][i]['labels'][:50]}")
+    # for i in range(3):
+    #     print(f"Review #{i}")
+    #     # print(f"Text: {tokenized_dataset_checking['train'][i]['text'][:50]}")
+    #     print(f"Token ID: {tokenized_dataset_checking['train'][i]['input_ids'][:50]}")
+    #     print(f"Token Labels: {tokenized_dataset_checking['train'][i]['labels'][:50]}")
+
+
+    # for i in range(3):
+
+    #     print(f"Let's see")
+
+    #     print(tokenized_dataset_checking)
 
     # print(f"The postive reviews are: {test}")
 

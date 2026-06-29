@@ -11,7 +11,8 @@ full_dataset = data_process(review=500)
 args = TrainingArguments(
     output_dir="./results",
     num_train_epochs = 3,
-    logging_dir= "./logs",
+    logging_dir= "results/runs",
+    logging_strategy= "steps",
     logging_steps= 5,
     
     eval_strategy= "steps",
